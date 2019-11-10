@@ -42,6 +42,7 @@ button {
     background: #eee;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .te-title {
@@ -68,3 +69,20 @@ button {
 .te-container :focus{
     outline: none;
 } 
+
+
+.te-popover {
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: calc(50% - 250px);
+    width: 500px;
+}
+
+.te-popover-input {
+    width: 100%;
+    font-size: 20px;
+    padding: 0.3em;
+    border: none;
+    border-bottom: 1px solid #aaa;
+}
