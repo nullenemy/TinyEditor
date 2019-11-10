@@ -32,6 +32,12 @@ button {
     width: 30px;
 }
 
+hr {
+    margin: 40px auto;
+    width: 50%;
+    color: #eee;
+}
+
 
 .te-container {
     width: 100%;
@@ -86,3 +92,4 @@ button {
     border: none;
     border-bottom: 1px solid #aaa;
 }
+

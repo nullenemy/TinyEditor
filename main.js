@@ -122,7 +122,8 @@ const Commands = {
         icon: '&#8213;',
         name: 'insertHorizontalRule',
         exec: () => {
-            return document.execCommand('insertHorizontalRule', false, null);
+            return document.execCommand('insertHorizontalRule', false, null) 
+                   && document.execCommand("insertParagraph", false, null);
         }
     },
     createLink: {
@@ -221,6 +222,7 @@ function togglePopover(type){
         selRange = saveSelection();
         console.log(selRange);
         popover.style.display = "block";
+        input.focus();
         input.onkeydown = function(e) {
             console.log(e);
             
@@ -244,28 +246,18 @@ function togglePopover(type){
 }
 
 
-
-
-
 class TinyEditor {
     constructor(parentNode){
         this.parent = parentNode;
     }
     render = () => {
-        // //let title = document.createElement("h1");
-        // title.className = className.title;
-        // title.contentEditable = true;
-        // title.innerHTML = "Hello World";
-        // title.focus();
-
         let content = document.createElement("div");
         content.className = className.content;
         content.contentEditable = true;
         let toolbar = buildButtonsFromCommands(content);
 
-
         let popover = buildPopover();
-        // this.parent.appendChild(title);
+       
         this.parent.appendChild(toolbar);
         this.parent.appendChild(content);
         this.parent.appendChild(popover);
