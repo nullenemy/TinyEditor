@@ -1,5 +1,10 @@
 
-
+const className = {
+    title: 'te-title',
+    container: "te-container",
+    toolbar: "te-toolbar",
+    content: "te-content",
+}
 const Commands = {
     bold: {
         name: 'bold',
@@ -114,6 +119,7 @@ const Commands = {
 
 function buildButtonsFromCommands(){
     let toolbar = document.createElement("div");
+    toolbar.className = className.toolbar;
     
     for(var command in Commands){
         let button = document.createElement("button");
@@ -135,14 +141,23 @@ class TinyEditor {
         this.parent = parentNode;
     }
     render = () => {
+        let title = document.createElement("h1");
+        title.className = className.title;
+        title.contentEditable = true;
+        title.innerHTML = "Hello World";
+        title.focus();
+
         let content = document.createElement("div");
+        content.className = className.content;
         content.contentEditable = true;
         let toolbar = buildButtonsFromCommands(content);
+        this.parent.appendChild(title);
         this.parent.appendChild(toolbar);
         this.parent.appendChild(content);
     }
 }
-
-let parent = document.body;
+let parent = document.createElement("div");
+parent.className =  className.container;
+document.body.appendChild(parent);
 var editor = new TinyEditor(parent);
 editor.render();

@@ -1,0 +1,70 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    background: #eee;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+button {
+    border: none;
+    font-size: 15px;
+    line-height: 30px;
+    height: 40px;
+    margin-right: 10px;
+    background: none;
+    width: 30px;
+}
+
+
+.te-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 10px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.te-title {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.te-toolbar {
+    padding-left: 10px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #eee;
+}
+
+
+.te-content {
+    background: #FFFFFF;
+    flex: 1;
+    padding: 30px 20px;
+    font-size: 1.2em;
+}
+
+.te-container :focus{
+    outline: none;
+} 
