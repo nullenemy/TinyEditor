@@ -68,8 +68,13 @@ hr {
 .te-content {
     background: #FFFFFF;
     flex: 1;
-    padding: 30px 20px;
-    font-size: 1.2em;
+    padding: 10px 20px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.te-content p {
+    margin: 0;
 }
 
 .te-container :focus{
