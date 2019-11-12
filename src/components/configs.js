@@ -48,7 +48,7 @@ export default {
 
     heading1:  {
         name: 'heading1',
-        icon: `<b>H<sub>1</sub></b>`,
+        icon: `<b>H1</b>`,
         exec: () => {
             var selection = window.getSelection();
             var node = selection.anchorNode.parentNode;
@@ -61,7 +61,7 @@ export default {
     },
     heading2: {
         name: 'heading2',
-        icon: `<b>H<sub>2</sub></b>`,
+        icon: `<b>H2</b>`,
         exec: () => {
             var selection = window.getSelection();
             var node = selection.anchorNode.parentNode;
@@ -74,7 +74,7 @@ export default {
     },
     heading3: {
         name: 'heading3',
-        icon: `<b>H<sub>3</sub></b>`,
+        icon: `<b>H3</b>`,
         exec: () => {
             var selection = window.getSelection();
             var node = selection.anchorNode.parentNode;

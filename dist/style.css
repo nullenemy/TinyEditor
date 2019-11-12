@@ -21,15 +21,27 @@ code {
     monospace;
 }
 
-
 button {
     border: none;
     font-size: 15px;
     line-height: 30px;
-    height: 40px;
+    height: 100%;
     margin-right: 10px;
     background: none;
-    width: 30px;
+    width: 40px;
+}
+
+button::-moz-focus-inner { 
+    border: 0; 
+}
+
+button:hover{
+    background: #eee;
+}
+
+button:disabled,
+button[disabled]{
+    opacity: 0.5;
 }
 
 hr {
@@ -63,6 +75,8 @@ hr {
     background: #FFFFFF;
     border-bottom: 1px solid #eee;
 }
+
+
 
 
 .te-content {
