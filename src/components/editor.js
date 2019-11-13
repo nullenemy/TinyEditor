@@ -13,6 +13,10 @@ function editor(){
             editor.innerHTML = "<p><br></p>"
         }
     })
+
+    editor.addEventListener("onChange", (value) =>{
+        console.log(value);
+    })
     return editor;
 }
 
